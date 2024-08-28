@@ -10,7 +10,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full flex justify-between items-center px-6 py-4 bg-gray-900'>
+    <div className='w-full px-6 py-4 bg-gray-900'>
+      <div className='flex justify-between 2xl:justify-evenly items-center'> 
       <div className='text-white'>
         <Image
           src="/header/logo.png"
@@ -74,6 +75,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      </div>
     </div>
   );
 };

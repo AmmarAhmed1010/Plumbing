@@ -11,7 +11,7 @@ const index = () => {
     </section>
     <section className='bg-white gap-10 flex 2xl:flex-row flex-col
     justify-center items-center h-screen w-full'>
-    <div className='flex bg-orange-400 p-8 w-full justify-end items-center h-full'>
+    <div className='flex p-8 w-full justify-end items-center h-full'>
   <Image
     src="/index/img1.png"
     alt="Description of the image"
@@ -20,7 +20,7 @@ const index = () => {
     style={{ objectFit: 'cover', height: '100%', width: '100%' }} // Make the image cover the div
   />
 </div>
-<div className="flex flex-col gap-4 bg-yellow-200 p-4">
+<div className="flex flex-col gap-4 p-4">
   <h1 className="text-[#3896D6] text-[20px] 2xl:text-[41.06px] font-bold">Southern Gold Coast Plumbing Services</h1>
   <h3 className="text-[#266189] font-bold text-[18px] 2xl:text-[23px]">Servicing Palm Beach Currumbin <br/>
   Burleigh Tugum & Surrounds</h3>
