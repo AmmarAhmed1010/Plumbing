@@ -15,6 +15,7 @@ const index = () => {
   <Image
     src="/index/img1.png"
     alt="Description of the image"
+    className='w-[300px] h-[200px]'
     width={500} // Set the width as needed
     height={500} // Set the height as needed or use 'auto' for aspect ratio
     style={{ objectFit: 'cover', height: '100%', width: '100%' }} // Make the image cover the div
@@ -29,9 +30,11 @@ const index = () => {
   </p>
   <h3 className="text-[18px] font-serif font-bold 2xl:text-[23px] text-[#266189]">Prompt Service Every Time</h3>
   <p>Despite the relaxed ambience that the Southern Gold Coast offers we at WPH Plumbing recognise the urgency of your needs Our commitment Timely service ensuring no prolonged disruptions to your daily life Whether you’re in Palm Beach Currumbin Burleigh Tugun or another corner of the Coast we’re here to help We’ll make sure the only thing draining is your pipes not your patience</p>
-  <button className="bg-[#3896D6] rounded-3xl text-white">
+ 
+<div>  <button className="bg-[#3896D6] rounded-3xl text-white">
     <h3 className="text-[14px]">Learn More</h3>
   </button>
+  </div>
 </div>
 
 </section>

@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
-const about = () => {
+const blog = () => {
   return (
     <section className='bg-black h-screen w-full pt-14'>
     <Navbar/>
@@ -9,4 +9,4 @@ const about = () => {
   )
 }
 
-export default about
+export default blog

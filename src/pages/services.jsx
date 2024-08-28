@@ -3,9 +3,9 @@ import React from 'react'
 
 const services = () => {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <section className='bg-black h-screen w-full pt-14'>
+    <Navbar/>
+    </section>
   )
 }
 
