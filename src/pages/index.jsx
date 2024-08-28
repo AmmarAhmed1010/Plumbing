@@ -9,7 +9,8 @@ const index = () => {
     <section className='bg-black h-screen w-full pt-14'>
     <Navbar/>
     </section>
-    <section className='bg-white gap-10 flex flex-wrap justify-center items-center h-screen w-full'>
+    <section className='bg-white gap-10 flex 2xl:flex-row flex-col
+    justify-center items-center h-screen w-full'>
     <div className='flex bg-orange-400 p-8 w-full justify-end items-center h-full'>
   <Image
     src="/index/img1.png"
