@@ -3,9 +3,8 @@ import React from 'react'
 
 const about = () => {
   return (
-    <section className='bg-black h-screen w-full pt-14'>
-    <Navbar/>
-    </section>
+ <>
+ </>
   )
 }
 

@@ -14,10 +14,7 @@ const Index = () => {
 
   return (
     <>
-      {/* Navbar Section */}
-      <section className='bg-black h-screen w-full pt-14'>
-        <Navbar />
-      </section>
+     
 
       {/* Section 1 */}
       <section className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 p-4 sm:p-8 min-h-screen'>
