@@ -23,7 +23,7 @@ const Index = () => {
   }}
 >
   <Navbar />
-  <div className='container items-center md:items-start md:mx-36 flex flex-col mt-8'>
+  <div className='container items-center md:items-start w-full md:px-36 flex flex-col mt-8'>
     <div className='flex flex-col text-white mb-4'>
       <h1 className='text-5xl font-bold '>HELLO,</h1>
       <h1 className='text-5xl font-bold '>FELLOW TAP</h1>
