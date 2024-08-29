@@ -50,12 +50,12 @@ const Navbar = () => {
             0414 440 509
           </button>
         </div>
-        <div className='md:hidden text-blue-400' onClick={toggleMenu}>
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
+        <div className='md:hidden text-[#2296F9]' onClick={toggleMenu}>
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
           </svg>
         </div>
-        <div className={`md:hidden fixed top-24 left-0 w-full bg-[#3896D6] text-white transition-all duration-700 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+        <div className={`md:hidden fixed top-36 left-0 w-full bg-[#3896D6] text-white transition-all duration-700 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
           <ul className='flex flex-col items-center'>
             <li className={`w-full text-center py-2 ${router.pathname === '/' ? 'text-[#2296F9] bg-[#55595C]' : ''}`}>
               <Link href="/" onClick={closeMenu}>HOME</Link>
