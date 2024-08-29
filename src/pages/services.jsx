@@ -136,7 +136,7 @@ const Services = () => {
       <section className='w-full py-12'>
       <div className='text-center mb-8'>
         <h3 className='text-3xl text-[#266189] font-bold'>WPH Plumbing</h3>
-        <h1 className='text-5xl text-[#3896D6] font-bold' >Client's Testimonials</h1>
+        <h1 className='text-5xl text-[#3896D6] font-bold' >Clients Testimonials</h1>
         
       </div>
       <div className='flex overflow-hidden w-full' ref={scrollRef}>
