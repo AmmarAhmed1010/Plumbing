@@ -16,12 +16,12 @@ const Services = () => {
   const cards = [
     {
       title: 'Kirryn Cossman',
-      content: 'Extremely happy with the service we received from Will. He was very professional, reliable and knowledgable. We have used him twice now and couldnt be happier. Thanks again.',
+      content: 'Extremely happy with the service we received from Will. He was very professional reliable and knowledgable. We have used him twice now and couldnt be happier. Thanks again.',
       bgColor: 'bg-white',
     },
     {
       title: 'Ryu Noai',
-      content: 'We had Will from WPH Plumbing do some work on our house. The result was great, the pricing transparent and Will was very easy to deal with. Thanks for your work!',
+      content: 'We had Will from WPH Plumbing do some work on our house. The result was great the pricing transparent and Will was very easy to deal with. Thanks for your work',
       bgColor: 'bg-white',
     },
     {
@@ -31,12 +31,12 @@ const Services = () => {
     },
     {
       title: 'Soonah Walkom',
-      content: 'Great service with great communications! Arrived on time and dressed appropriately. Very reasonably priced highly recommend!',
+      content: 'Great service with great communications Arrived on time and dressed appropriately. Very reasonably priced highly recommend',
       bgColor: 'bg-white',
     },
     {
       title: 'Soonah Walkom',
-      content: 'Great service with great communications! Arrived on time and dressed appropriately. Very reasonably priced highly recommend!',
+      content: 'Great service with great communications Arrived on time and dressed appropriately. Very reasonably priced highly recommend',
       bgColor: 'bg-white',
     },
   ];
