@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full px-6 py-4 bg-gray-900'>
+    <div className='w-full px-6 py-4'>
       <div className='flex justify-between 2xl:justify-evenly items-center'>
         <div className='text-white'>
           <Image
@@ -28,19 +28,19 @@ const Navbar = () => {
         </div>
         <div className='hidden md:flex text-white justify-center'>
           <ul className='flex gap-16 text-sm font-bold'>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/' ? 'text-white bg-black' : ''}`}>
+            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/" onClick={closeMenu}>HOME</Link>
             </li>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/about' ? 'text-white bg-black' : ''}`}>
+            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/about' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/about" onClick={closeMenu}>ABOUT</Link>
             </li>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/services' ? 'text-white bg-black' : ''}`}>
+            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/services' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/services" onClick={closeMenu}>SERVICES</Link>
             </li>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/blog' ? 'text-white bg-black' : ''}`}>
+            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/blog' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/blog" onClick={closeMenu}>BLOG</Link>
             </li>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/contact_us' ? 'text-white bg-black' : ''}`}>
+            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/contact_us' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/contact_us" onClick={closeMenu}>CONTACT US</Link>
             </li>
           </ul>
