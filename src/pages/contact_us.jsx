@@ -15,7 +15,7 @@ const contact_us = () => {
   <Navbar />
   <div className='container items-center  flex flex-col mt-8'>
     <div className='flex flex-col text-white mb-4'>
-      <h1 className='text-5xl font-bold '>CONTACT US</h1>
+      <h1 className='text-5xl font-serif font-extrabold'>CONTACT US</h1>
     </div>
   </div>
 </section>

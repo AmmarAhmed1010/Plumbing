@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif' , "Wedges"],
+        montserrat: ['Montserrat', 'sans-serif'],
         // add more fonts if needed
+      },
+      fontFamily: {
+        wedges: ['Wedges', 'sans-serif'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
