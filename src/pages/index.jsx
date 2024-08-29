@@ -19,16 +19,6 @@ const Index = () => {
     visible: { opacity: 1, y: 0 }
   };
 
-  const textScaleRotate = {
-    hidden: { opacity: 0, scale: 0.8, rotate: -10 },
-    visible: { opacity: 1, scale: 1, rotate: 0 }
-  };
-
-  const imageZoomRotate = {
-    hidden: { opacity: 0, scale: 0.9, rotate: 5 },
-    visible: { opacity: 1, scale: 1, rotate: 0 }
-  };
-
   return (
     <>
       <section
@@ -45,7 +35,7 @@ const Index = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={textScaleRotate}
+            variants={fadeInUp}
             className='flex flex-col text-white mb-4'
           >
             <h1 className='text-5xl font-serif font-extrabold'>HELLO,</h1>
@@ -71,7 +61,7 @@ const Index = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={imageZoomRotate}
+          variants={fadeInUp}
           className='flex justify-center items-center w-full md:w-1/2'
         >
           <Image
@@ -138,7 +128,7 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={imageZoomRotate}
+                variants={fadeInUp}
                 className='relative w-full max-w-[400px] h-64'
               >
                 <Image
@@ -187,7 +177,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={imageZoomRotate}
+              variants={fadeInUp}
               className='flex w-full justify-center items-center'
             >
               <Image
@@ -221,7 +211,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={imageZoomRotate}
+              variants={fadeInUp}
               className='flex justify-center items-center w-full md:w-1/2'
             >
               <Image
