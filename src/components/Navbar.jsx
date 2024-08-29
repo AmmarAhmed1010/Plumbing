@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full px-6 py-4'>
+    <div className='w-full px-6  py-4'>
       <div className='flex justify-between 2xl:justify-evenly items-center'>
         <div className='text-white'>
           <Image
@@ -36,9 +36,6 @@ const Navbar = () => {
             </li>
             <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/services' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/services" onClick={closeMenu}>SERVICES</Link>
-            </li>
-            <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/blog' ? 'text-[#2296F9]' : ''}`}>
-              <Link href="/blog" onClick={closeMenu}>BLOG</Link>
             </li>
             <li className={`hover:text-blue-400 duration-300 ${router.pathname === '/contact_us' ? 'text-[#2296F9]' : ''}`}>
               <Link href="/contact_us" onClick={closeMenu}>CONTACT US</Link>
@@ -65,9 +62,6 @@ const Navbar = () => {
             </li>
             <li className={`w-full text-center py-2 ${router.pathname === '/services' ? 'text-[#2296F9] bg-[#55595C]' : ''}`}>
               <Link href="/services" onClick={closeMenu}>SERVICES</Link>
-            </li>
-            <li className={`w-full text-center py-2 ${router.pathname === '/blog' ? 'text-[#2296F9] bg-[#55595C]' : ''}`}>
-              <Link href="/blog" onClick={closeMenu}>BLOG</Link>
             </li>
             <li className={`w-full text-center py-2 ${router.pathname === '/contact_us' ? 'text-[#2296F9] bg-[#55595C]' : ''}`}>
               <Link href="/contact_us" onClick={closeMenu}>CONTACT US</Link>
