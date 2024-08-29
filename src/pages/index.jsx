@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Index = () => {
   const texts = [
@@ -13,14 +14,19 @@ const Index = () => {
     "GAS FITTING"
   ];
 
-  const fadeInFromLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 }
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
-  const imageFromLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 }
+  const textScaleRotate = {
+    hidden: { opacity: 0, scale: 0.8, rotate: -10 },
+    visible: { opacity: 1, scale: 1, rotate: 0 }
+  };
+
+  const imageZoomRotate = {
+    hidden: { opacity: 0, scale: 0.9, rotate: 5 },
+    visible: { opacity: 1, scale: 1, rotate: 0 }
   };
 
   return (
@@ -39,7 +45,7 @@ const Index = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInFromLeft}
+            variants={textScaleRotate}
             className='flex flex-col text-white mb-4'
           >
             <h1 className='text-5xl font-serif font-extrabold'>HELLO,</h1>
@@ -51,7 +57,7 @@ const Index = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInFromLeft}
+            variants={fadeInUp}
             className='bg-[#3896D6] hover:bg-white cursor-pointer hover:text-[#3896D6] text-white px-6 py-3 my-6 shadow-zinc-800 shadow-lg rounded-3xl'
           >
             Contact Us
@@ -65,7 +71,7 @@ const Index = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={imageFromLeft}
+          variants={imageZoomRotate}
           className='flex justify-center items-center w-full md:w-1/2'
         >
           <Image
@@ -81,7 +87,7 @@ const Index = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeInFromLeft}
+          variants={fadeInUp}
           className="flex flex-col gap-4 text-left max-w-[90%] sm:max-w-[70%] md:max-w-[50%]"
         >
           <h1 className="text-[#3896D6] text-[20px] sm:text-[30px] md:text-[41px] font-bold">
@@ -114,7 +120,7 @@ const Index = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeInFromLeft}
+          variants={fadeInUp}
           className='text-start mb-8'
         >
           <h2 className='text-[#3896D6] text-[24px] sm:text-[30px] md:text-[41.6px] font-bold'>
@@ -132,7 +138,7 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={imageFromLeft}
+                variants={imageZoomRotate}
                 className='relative w-full max-w-[400px] h-64'
               >
                 <Image
@@ -164,7 +170,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={fadeInFromLeft}
+              variants={fadeInUp}
               className="flex flex-col gap-4 max-w-full md:max-w-[70%] lg:max-w-[60%]"
             >
               <h2 className='text-[#266189] text-[20px] sm:text-[23px] lg:text-[26px] font-bold'>
@@ -181,7 +187,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={imageFromLeft}
+              variants={imageZoomRotate}
               className='flex w-full justify-center items-center'
             >
               <Image
@@ -201,7 +207,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={fadeInFromLeft}
+              variants={fadeInUp}
               className='flex flex-col gap-4 max-w-full md:max-w-[50%] lg:max-w-[40%]'
             >
               <h2 className='text-[#266189] text-[20px] sm:text-[23px] lg:text-[26px] font-bold'>
@@ -215,7 +221,7 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={imageFromLeft}
+              variants={imageZoomRotate}
               className='flex justify-center items-center w-full md:w-1/2'
             >
               <Image
