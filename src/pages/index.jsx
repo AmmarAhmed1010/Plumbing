@@ -14,7 +14,20 @@ const Index = () => {
 
   return (
     <>
-     
+     <section className='w-full bg-gray-100 md:pl-44 py-12'>
+            <div className='container items-center md:items-start flex flex-col mt-8'>
+                <div className='flex flex-col font-serif mb-4'>
+                    {/* Assuming the Navbar already includes a logo */}
+                    <h1 className='text-5xl font-bold'>HELLO,</h1>
+                    <h1 className='text-5xl font-bold'>FELLOW TAP</h1>
+                    <h1 className='text-5xl font-bold'>USERS!</h1>
+                </div>
+
+                <button className='bg-[#3896D6] hover:bg-white cursor-pointer hover:text-[#3896D6] text-white px-6 py-3 rounded-3xl'>
+                    Contact Us
+                </button>
+            </div>
+        </section>
 
       {/* Section 1 */}
       <section className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 p-4 sm:p-8 min-h-screen'>
