@@ -15,7 +15,7 @@ const Services = () => {
   const cards = [
     {
       title: 'Kirryn Cossman',
-      content: 'Extremely happy with the service we received from Will. He was very professional reliable and knowledgeable. We have used him twice now and couldn’t be happier. Thanks again.',
+      content: 'Extremely happy with the service we received from Will. He was very professional reliable and knowledgeable. We have used him twice now and couldnt be happier. Thanks again.',
       bgColor: 'bg-white',
     },
     {
