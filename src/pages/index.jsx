@@ -1,6 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Index = () => {
   const texts = [
@@ -12,34 +14,65 @@ const Index = () => {
     "GAS FITTING"
   ];
 
+  // Animation settings
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const slideIn = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
+  // Hook to observe section visibility
+  const { ref: sectionRef, inView: isInView } = useInView({ triggerOnce: true });
+
   return (
     <>
-    <section
-  className='w-full md:h-screen  py-12'
-  style={{
-    backgroundImage: 'url(/index/home.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }}
->
-  <Navbar />
-  <div className='container items-center md:items-start w-full md:px-36 flex flex-col mt-8'>
-    <div className='flex flex-col text-white mb-4'>
-      <h1 className='text-5xl font-bold '>HELLO,</h1>
-      <h1 className='text-5xl font-bold '>FELLOW TAP</h1>
-      <h1 className='text-5xl font-bold '>USERS!</h1>
-    </div>
+      <section
+        className='w-full md:h-screen py-12'
+        style={{
+          backgroundImage: 'url(/index/home.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <Navbar />
+        <div className='container items-center md:items-start w-full md:px-36 flex flex-col mt-8'>
+          <motion.div
+            className='flex flex-col text-white mb-4'
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeIn}
+          >
+            <h1 className='text-5xl font-bold'>HELLO,</h1>
+            <h1 className='text-5xl font-bold'>FELLOW TAP</h1>
+            <h1 className='text-5xl font-bold'>USERS!</h1>
+          </motion.div>
 
-    <button className='bg-[#3896D6] hover:bg-white cursor-pointer hover:text-[#3896D6] text-white px-6 py-3 my-6 shadow-zinc-800 shadow-lg rounded-3xl'>
-      Contact Us
-    </button>
-  </div>
-</section>
-
+          <motion.button
+            className='bg-[#3896D6] hover:bg-white cursor-pointer hover:text-[#3896D6] text-white px-6 py-3 my-6 shadow-zinc-800 shadow-lg rounded-3xl'
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeIn}
+          >
+            Contact Us
+          </motion.button>
+        </div>
+      </section>
 
       {/* Section 1 */}
-      <section className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 p-4 sm:p-8 min-h-screen'>
-        <div className='flex justify-center items-center w-full md:w-1/2'>
+      <section
+        className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 p-4 sm:p-8 min-h-screen'
+        ref={sectionRef}
+      >
+        <motion.div
+          className='flex justify-center items-center w-full md:w-1/2'
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={slideIn}
+        >
           <Image
             src="/index/img1.png"
             alt="Plumbing Service Image"
@@ -48,8 +81,13 @@ const Index = () => {
             className='w-full h-auto max-w-[500px]'
             style={{ objectFit: 'cover' }}
           />
-        </div>
-        <div className="flex flex-col gap-4 text-left max-w-[90%] sm:max-w-[70%] md:max-w-[50%]">
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-4 text-left max-w-[90%] sm:max-w-[70%] md:max-w-[50%]"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeIn}
+        >
           <h1 className="text-[#3896D6] text-[20px] sm:text-[30px] md:text-[41px] font-bold">
             Southern Gold Coast Plumbing Services
           </h1>
@@ -58,20 +96,20 @@ const Index = () => {
             Burleigh Tugun & Surrounds
           </h3>
           <p className="text-[16px] sm:text-[18px] text-black">
-            Welcome to WPH Plumbing, your local Southern Gold Coast Plumbers servicing Palm Beach, Currumbin, Burleigh, Tugun, and the surrounding area. Born and bred on the Gold Coast, our local roots run deep, and our love for the community shines through in every job we undertake. Whether you’re contending with a bothersome blockage, a mischievous leak, or just in need of some friendly advice on your plumbing, we’re here to assist.
+            Welcome to WPH Plumbing, your local Southern Gold Coast Plumbers servicing Palm Beach, Currumbin, Burleigh, Tugun, and the surrounding area. Born and bred on the Gold Coast, our local roots run deep, and our love for the community shines through in every job we undertake. Whether youre contending with a bothersome blockage, a mischievous leak, or just in need of some friendly advice on your plumbing, were here to assist.
           </p>
           <h3 className="text-[18px] sm:text-[20px] font-serif font-bold md:text-[23px] text-[#266189]">
             Prompt Service Every Time
           </h3>
           <p className="text-[16px] sm:text-[18px] text-black">
-            Despite the relaxed ambience that the Southern Gold Coast offers, we at WPH Plumbing recognise the urgency of your needs. Our commitment: Timely service ensuring no prolonged disruptions to your daily life. Whether you’re in Palm Beach, Currumbin, Burleigh, Tugun, or another corner of the Coast, we’re here to help. We’ll make sure the only thing draining is your pipes, not your patience.
+            Despite the relaxed ambience that the Southern Gold Coast offers, we at WPH Plumbing recognise the urgency of your needs. Our commitment: Timely service ensuring no prolonged disruptions to your daily life. Whether youre in Palm Beach, Currumbin, Burleigh, Tugun, or another corner of the Coast, were here to help. Well make sure the only thing draining is your pipes, not your patience.
           </p>
           <div className='flex justify-center md:justify-start'>
             <button className="bg-[#3896D6] rounded-3xl text-white px-6 py-3 mt-4">
               <h3 className="text-[14px]">Learn More</h3>
             </button>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Section 2 */}
