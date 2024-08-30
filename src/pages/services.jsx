@@ -132,7 +132,7 @@ const Services = () => {
                 />
                 <div className='absolute inset-0 flex justify-center items-center'>
                   <div className='bg-white bg-opacity-70 rounded-3xl text-center hover:bg-[#1C285D] cursor-pointer px-4 md:px-8 py-2'>
-                    <h1 className='text-[#266189] hover:text-white text-[14px] md:text-[18px] md:text-[25px] font-bold'>
+                    <h1 className='text-[#266189] hover:text-white text-[14px] md:text-[25px] font-bold'>
                       {firstWord} <br /> {secondLine}
                     </h1>
                   </div>
@@ -143,39 +143,13 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section className='w-full py-12'>
-        <div className='text-center mb-8'>
-          <h3 className='text-2xl md:text-3xl text-[#266189] font-bold'>WPH Plumbing</h3>
-          <h1 className='text-4xl md:text-5xl text-[#3896D6] font-bold'>Clients Testimonials</h1>
-        </div>
-        <div className='flex overflow-hidden w-full' ref={scrollRef}>
-          <div className='flex'>
-            {/* Original Set of Cards */}
-            {cards.map((card, index) => (
-              <div key={index} className='min-w-[calc(100%/1.2)] md:min-w-[calc(100%/3)] p-4'>
-                <div className={`${card.bgColor} shadow-lg shadow-slate-700 py-6 md:py-8 rounded-lg p-6 h-[180px] md:h-[200px] flex flex-col justify-between`}>
-                  <p className='text-[14px] md:text-[16px]'>{card.content}</p>
-                  <h3 className='text-lg md:text-xl text-[#266189] font-bold mb-2'>{card.title}</h3>
-                </div>
-              </div>
-            ))}
-            {/* Duplicate Set of Cards for seamless loop */}
-            {cards.map((card, index) => (
-              <div key={`duplicate-${index}`} className='min-w-[calc(100%/1.2)] md:min-w-[calc(100%/3)] p-4'>
-                <div className={`${card.bgColor} shadow-lg shadow-slate-700 py-6 md:py-8 rounded-lg p-6 h-[180px] md:h-[200px] flex flex-col justify-between`}>
-                  <p className='text-[14px] md:text-[16px]'>{card.content}</p>
-                  <h3 className='text-lg md:text-xl text-[#266189] font-bold mb-2'>{card.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* Section 4 */}
       <section>
-        {/* Additional content for Section 4 */}
+        {/* Additional content for Section 4
+        
+        */}
       </section>
     </>
   );

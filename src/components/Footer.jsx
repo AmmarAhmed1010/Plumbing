@@ -50,3 +50,34 @@ const Footer = () => {
 }
 
 export default Footer;
+
+
+  
+//   <section className='w-full py-12'>
+//   <div className='text-center mb-8'>
+//     <h3 className='text-2xl md:text-3xl text-[#266189] font-bold'>WPH Plumbing</h3>
+//     <h1 className='text-4xl md:text-5xl text-[#3896D6] font-bold'>Clients Testimonials</h1>
+//   </div>
+//   <div className='flex overflow-hidden w-full' ref={scrollRef}>
+//     <div className='flex'>
+     
+//       {cards.map((card, index) => (
+//         <div key={index} className='min-w-[calc(100%/1.2)] md:min-w-[calc(100%/3)] p-4'>
+//           <div className={`${card.bgColor} shadow-lg shadow-slate-700 py-6 md:py-8 rounded-lg p-6 h-[180px] md:h-[200px] flex flex-col justify-between`}>
+//             <p className='text-[14px] md:text-[16px]'>{card.content}</p>
+//             <h3 className='text-lg md:text-xl text-[#266189] font-bold mb-2'>{card.title}</h3>
+//           </div>
+//         </div>
+//       ))}
+   
+//       {cards.map((card, index) => (
+//         <div key={`duplicate-${index}`} className='min-w-[calc(100%/1.2)] md:min-w-[calc(100%/3)] p-4'>
+//           <div className={`${card.bgColor} shadow-lg shadow-slate-700 py-6 md:py-8 rounded-lg p-6 h-[180px] md:h-[200px] flex flex-col justify-between`}>
+//             <p className='text-[14px] md:text-[16px]'>{card.content}</p>
+//             <h3 className='text-lg md:text-xl text-[#266189] font-bold mb-2'>{card.title}</h3>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// </section>
