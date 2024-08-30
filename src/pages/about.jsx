@@ -37,52 +37,23 @@ const About = () => {
               The daily challenges and diversity of plumbing is what inspires Will each and every day. Will is extremely excited to grow his business with the employment of his first apprentice Connor joining WPH. Will enjoys teaching the dark art of plumbing to Connor but more importantly also having someone there to dig the holes.
             </p>
             <div className='w-full flex justify-end'>
-            <button className='bg-[#3896D6] text-white text-[14px] md:text-[16px] font-bold rounded-3xl h-[56px] px-8'>
-              CONTACT US
-            </button>
+              <button className='bg-[#3896D6] text-white text-[14px] md:text-[16px] font-bold rounded-3xl h-[56px] px-8'>
+                CONTACT US
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 2 */}
-      <section className='relative w-full'>
-        {/* Image Section */}
-        <div className="image-container w-full h-[900px] md:h-[800px] lg:h-[600px]">
-          <Image 
-            src="/about/about5.png"   // Replace with your image path
-            alt="Descriptive text"    // Alternative text for accessibility
-            layout="fill"             // Fill the entire container
-            objectFit="cover"         // Ensure the image covers the entire container while maintaining aspect ratio
-            quality={75}              // Quality of the image
-            priority={true}           // Preload the image for better performance
-          />
-        </div>
-
-        {/* Overlay with Background Color and Text */}
-        <div className='absolute inset-0 bg-[#3896D6] bg-opacity-90 flex items-center'>
-          <div className='px-4 py-6 w-full md:px-6 md:py-12'>
-            <div className="wrapper text-center flex flex-col gap-4 md:gap-6">
-              <p className='text-[14px] md:text-[16px] text-white'>
-                WPH Plumbing is your trusted and reliable plumbing partner in the Gold Coast area. Our team of experienced and knowledgeable professionals is dedicated to providing quality service to all our clients. As a local business born and raised in the community we take pride in serving our neighbors and providing them with top-notch plumbing solutions.
-              </p>
-              <p className='text-[14px] md:text-[16px] text-white'>
-                We understand that plumbing emergencies can happen at any time and thats why we offer 24/7 services to ensure that our clients are always covered no matter the time of day. Our team is always available to take your call and dispatch our skilled technicians to your location as quickly as possible to resolve your plumbing issues in a timely and efficient manner.
-              </p>
-              <p className='text-[14px] md:text-[16px] text-white'>
-                As Currumbins preferred plumber our team has extensive experience dealing with the unique plumbing challenges that homeowners and businesses in the area face. From fixing a leaky faucet to undertaking major plumbing projects we have the expertise to handle any plumbing job that comes our way regardless of its complexity.
-              </p>
-              <p className='text-[14px] md:text-[16px] text-white'>
-                At WPH Plumbing were all about building relationships with our clients. We know that trust honesty and transparency are crucial in building a lasting relationship and were committed to embodying these values in all our interactions. Our personalized approach to every job means we take time to understand your unique needs find the perfect solution for you and communicate effectively throughout the process.
-              </p>
-              <p className='text-[14px] md:text-[16px] text-white'>
-                Were dedicated to staying uptodate with the latest advancements in the industry and thats why our technicians are equipped with the most advanced tools and technology in the market to deliver cuttingedge services to our clients. Were always striving to exceed our clients expectations and we never compromise on the quality of service we deliver.
-              </p>
-              <p className='text-[14px] md:text-[16px] text-white'>
-                Thank you for considering WPH Plumbing for your plumbing needs. Whether youre facing a minor plumbing issue or a major emergency  always ready to provide you with highquality service that will keep you satisfied. Dont hesitate to contact us to schedule an appointment or speak with one of our friendly team members.
-              </p>
-            </div>
-          </div>
+      <section className='px-6 py-6 bg-[#3896D6] w-full'>
+        <div className="wrapper text-center flex flex-col gap-6">
+          <p className='text-[16px] text-white'>WPH Plumbing is your trusted and reliable plumbing partner in the Gold Coast area Our team of experienced and knowledgeable professionals is dedicated to providing quality service to all our clients As a local business born and raised in the community we take pride in serving our neighbors and providing them with top notch plumbing solutions</p>
+          <p className='text-[16px] text-white'>We understand that plumbing emergencies can happen at any time and that’s why we offer 24/7 services to ensure that our clients are always covered no matter the time of day Our team is always available to take your call and dispatch our skilled technicians to your location as quickly as possible to resolve your plumbing issues in a timely and efficient manner</p>
+          <p className='text-[16px] text-white'>As Currumbins preferred plumber our team has extensive experience dealing with the unique plumbing challenges that homeowners and businesses in the area face From fixing a leaky faucet to undertaking major plumbing projects we have the expertise to handle any plumbing job that comes our way regardless of its complexity</p>
+          <p className='text-[16px] text-white'>At WPH Plumbing were all about building relationships with our clients We know that trust honesty and transparency are crucial in building a lasting relationship and were committed to embodying these values in all our interactions Our personalized approach to every job means we take time to understand your unique needs find the perfect solution for you and communicate effectively throughout the process</p>
+          <p className='text-[16px] text-white'>Were dedicated to staying up to date with the latest advancements in the industry and that’s why our technicians are equipped with the most advanced tools and technology in the market to deliver cutting edge services to our clients Were always striving to exceed our clients expectations and we never compromise on the quality of service we deliver</p>
+          <p className='text-[16px] text-white'>Thank you for considering WPH Plumbing for your plumbing needs Whether youre facing a minor plumbing issue or a major emergency were always ready to provide you with high quality service that will keep you satisfied Dont hesitate to contact us to schedule an appointment or speak with one of our friendly team members</p>
         </div>
       </section>
 
@@ -94,7 +65,7 @@ const About = () => {
 
         <div className="up gap-8 md:gap-12 lg:gap-20 py-6 flex flex-col justify-center items-center md:flex-row">
           <div className='flex-shrink-0'>
-            <Image 
+            <Image
               src="/about/about3.png"  // Path to your image
               alt="Will Hancock"       // Alternative text for accessibility
               width={407}              // Width set to 407px
@@ -121,7 +92,7 @@ const About = () => {
             </p>
           </div>
           <div className='flex-shrink-0'>
-            <Image 
+            <Image
               src="/about/about4.png"  // Path to your image
               alt="Connor the Barbarian" // Alternative text for accessibility
               width={407}               // Width set to 407px
