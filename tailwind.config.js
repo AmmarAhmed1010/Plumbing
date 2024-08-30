@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 3s cubic-bezier(0.25, 1, 0.5, 1) infinite',
+      },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         // add more fonts if needed
