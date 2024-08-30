@@ -54,7 +54,7 @@ const About = () => {
               A BACK STORY
             </motion.h1>
             <motion.p className='text-[14px] md:text-[16px]' variants={fadeIn}>
-              WPH Plumbing was born 7 years ago with a vision to provide quality plumbing services to the people of the Gold Coast and Northern NSW. Will loves his family and the outdoor life, if he isn't waist deep in a hole you can find him camping or more than likely catching some waves. His love and commitment to his family and friends extends to his clients with each of his clients becoming a part of the WPH family.
+              WPH Plumbing was born 7 years ago with a vision to provide quality plumbing services to the people of the Gold Coast and Northern NSW. Will loves his family and the outdoor life, if he isnt waist deep in a hole you can find him camping or more than likely catching some waves. His love and commitment to his family and friends extends to his clients with each of his clients becoming a part of the WPH family.
             </motion.p>
             <motion.p className='text-[14px] md:text-[16px]' variants={fadeIn}>
               The daily challenges and diversity of plumbing is what inspires Will each and every day. Will is extremely excited to grow his business with the employment of his first apprentice Connor joining WPH. Will enjoys teaching the dark art of plumbing to Connor but more importantly also having someone there to dig the holes.
