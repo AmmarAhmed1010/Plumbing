@@ -32,14 +32,14 @@ const Services = () => {
         }}
       >
         <Navbar />
-        <div className='container flex flex-col items-center mt-8'>
-          <motion.div 
-            initial={{ opacity: 0, y: -50 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }}
+        <div className='container items-center flex flex-col mt-8'>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className='flex flex-col text-white mb-4'
           >
-            <h1 className='text-3xl md:text-5xl font-serif font-extrabold text-center'>OUR SERVICES</h1>
+            <h1 className='text-5xl font-serif font-extrabold'>OUR SERVICES</h1>
           </motion.div>
         </div>
       </section>
