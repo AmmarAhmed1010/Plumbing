@@ -3,6 +3,22 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import React from 'react';
 
+// Reusing animation variants
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8 } }
+};
+
+const slideLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+};
+
+const slideUp = {
+  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
+
 const Services = () => {
   const texts = [
     'GENERAL MAINTENANCE',
@@ -34,9 +50,9 @@ const Services = () => {
         <Navbar />
         <div className='container items-center flex flex-col mt-8'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
             className='flex flex-col text-white mb-4'
           >
             <h1 className='text-5xl font-serif font-extrabold'>OUR SERVICES</h1>
@@ -47,9 +63,9 @@ const Services = () => {
       {/* Section 1 */}
       <section className='mb-8 flex flex-col lg:flex-row md:flex-col items-center justify-center w-full'>
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={slideLeft}
           className='flex flex-col mt-20 mb-8 px-6 md:px-12 lg:px-16 w-full lg:w-2/5 md:mb-0'
         >
           <p className='text-sm md:text-base lg:text-lg text-black mb-4'>
@@ -72,9 +88,9 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
           className='w-full md:w-1/2 lg:w-3/5 px-8 md:px-12 lg:px-16 md:mt-10 lg:mt-20 h-72 md:h-80 lg:h-96 flex justify-center items-center'
         >
           <Image
@@ -99,7 +115,7 @@ const Services = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1, ease: "easeOut" }}
                 className='relative w-full max-w-[300px] md:max-w-[400px] h-48 md:h-64'
               >
                 <Image
@@ -127,8 +143,9 @@ const Services = () => {
         <div className='overflow-hidden relative'>
           <motion.div
             className='w-full text-center mb-8'
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
             transition={{ duration: 0.8 }}
           >
             <h3 className='text-[#266189] font-bold text-[23px]'>WPH Plumbing</h3>
@@ -136,16 +153,18 @@ const Services = () => {
           </motion.div>
           <motion.div
             className='infinite-scroll flex space-x-4 animate-scroll'
-            initial={{ opacity: 0, x: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
             transition={{ duration: 0.8 }}
           >
             {cards.map(card => (
               <motion.div
                 key={card.id}
                 className='min-w-[250px] sm:min-w-[300px] p-4 sm:p-6 text-white rounded-lg shadow-xl mx-2'
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
                 transition={{ duration: 0.8 }}
               >
                 <p className='text-sm text-[#878787] sm:text-base'>{card.content}</p>
@@ -156,8 +175,9 @@ const Services = () => {
               <motion.div
                 key={card.id + '-duplicate'}
                 className='min-w-[250px] sm:min-w-[300px] p-4 sm:p-6 text-white rounded-lg shadow-xl mx-2'
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
                 transition={{ duration: 0.8 }}
               >
                 <p className='text-sm sm:text-base text-[#878787]'>{card.content}</p>

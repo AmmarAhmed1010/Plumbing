@@ -1,18 +1,28 @@
-import Navbar from '@/components/Navbar'
-import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
+import Navbar from '@/components/Navbar';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import React from 'react';
 
-// Reusing the same animation variants from Services page
+// Reusing animation variants
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1 } }
-}
+  visible: { opacity: 1, transition: { duration: 0.8 } }
+};
 
-const slideIn = (direction = 'left') => ({
-  hidden: { x: direction === 'left' ? -50 : 50, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 1 } }
-})
+const slideUp = {
+  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
+
+const slideLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+};
+
+const slideInFromBottom = {
+  hidden: { y: 50, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.8 } }
+};
 
 const About = () => {
   return (
@@ -28,9 +38,9 @@ const About = () => {
         <Navbar />
         <div className='container items-center flex flex-col mt-8'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
             className='flex flex-col text-white mb-4'
           >
             <h1 className='text-5xl font-serif font-extrabold'>ABOUT US</h1>
@@ -38,13 +48,12 @@ const About = () => {
         </div>
       </section>
 
-
       {/* Section 1 */}
       <motion.section
         className='px-4 py-6 md:px-8 md:py-12 lg:px-16'
         initial="hidden"
         whileInView="visible"
-        variants={slideIn('left')}
+        variants={slideLeft}
       >
         <div className="wrapper flex flex-col md:flex-row gap-6 md:gap-12">
           <div className="left w-full md:w-1/2">
@@ -74,7 +83,7 @@ const About = () => {
         className='px-6 py-6 bg-[#3896D6] w-full'
         initial="hidden"
         whileInView="visible"
-        variants={slideIn('left')}
+        variants={slideLeft}
       >
         <motion.div className="wrapper text-center flex flex-col gap-6" variants={fadeIn}>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
@@ -100,16 +109,21 @@ const About = () => {
 
       {/* Section 3 */}
       <section className='w-full px-4 py-6 md:px-8 md:py-12 lg:px-16'>
-        <div className="heading w-full text-center py-4">
-          <h1 className='text-[#3896D6] font-extrabold text-[24px] md:text-[36px] lg:text-[41px]'>MEET THE TEAM</h1>
-        </div>
-
+      <motion.div
+            className="heading w-full text-center py-4"
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
+          >
+                 <h1 className='text-[#3896D6] font-extrabold text-[24px] md:text-[36px] lg:text-[41px]'>MEET THE TEAM</h1>
+     
+          </motion.div>
         <div className="up gap-8 md:gap-12 lg:gap-20 py-6 flex flex-col justify-center items-center md:flex-row">
           <motion.div
             className='flex-shrink-0'
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
           >
             <Image
               src="/about/about3.png"
@@ -124,9 +138,9 @@ const About = () => {
           </motion.div>
           <motion.div
             className="content flex flex-col gap-4 md:gap-5 w-full md:w-[595px] text-center md:text-left px-4 md:px-0"
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={slideLeft}
           >
             <h1 className='text-[#3896D6] font-extrabold text-[20px] md:text-[24px]'>Will Hancock</h1>
             <p className='text-[14px] md:text-[16px]'>
@@ -138,9 +152,9 @@ const About = () => {
         <div className="down py-6 gap-8 md:gap-12 lg:gap-20 flex flex-col-reverse md:flex-row justify-center items-center">
           <motion.div
             className="content flex flex-col gap-4 md:gap-5 w-full md:w-[595px] text-center md:text-left px-4 md:px-0"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+              whileInView="visible"
+              variants={slideUp}
           >
             <h1 className='text-[#3896D6] font-extrabold text-[20px] md:text-[24px]'>Connor</h1>
             <p className='text-[14px] md:text-[16px]'>
@@ -150,9 +164,9 @@ const About = () => {
 
           <motion.div
             className='flex-shrink-0'
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
           >
             <Image
               src="/about/about4.png"
@@ -168,7 +182,7 @@ const About = () => {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default About
+export default About;

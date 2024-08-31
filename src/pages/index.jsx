@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Index = () => {
@@ -15,14 +15,23 @@ const Index = () => {
   ];
 
   // Animation settings
-  const fadeIn = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
-
   const slideIn = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8 } }
+  };
+
+  const slideLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  };
+
+  const slideUp = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
   };
 
   // Hook to observe section visibility
@@ -43,8 +52,8 @@ const Index = () => {
           <motion.div
             className='flex flex-col text-white mb-4'
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeIn}
+            whileInView="visible"
+            variants={slideUp}
           >
             <h1 className='text-5xl font-bold'>HELLO,</h1>
             <h1 className='text-5xl font-bold'>FELLOW TAP</h1>
@@ -54,8 +63,8 @@ const Index = () => {
           <motion.button
             className='bg-[#3896D6] hover:bg-white cursor-pointer hover:text-[#3896D6] text-white px-6 py-3 my-6 shadow-zinc-800 shadow-lg rounded-3xl'
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeIn}
+            whileInView="visible"
+            variants={slideLeft}
           >
             Contact Us
           </motion.button>
@@ -69,9 +78,9 @@ const Index = () => {
       >
         <motion.div
           className='flex justify-center items-center w-full md:w-1/2'
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={slideIn}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <Image
             src="/index/img1.png"
@@ -85,8 +94,8 @@ const Index = () => {
         <motion.div
           className="flex flex-col gap-4 text-left max-w-[90%] sm:max-w-[70%] md:max-w-[50%]"
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={fadeIn}
+          whileInView="visible"
+          variants={slideLeft}
         >
           <h1 className="text-[#3896D6] text-[20px] sm:text-[30px] md:text-[41px] font-bold">
             Southern Gold Coast Plumbing Services
@@ -115,9 +124,16 @@ const Index = () => {
       {/* Section 2 */}
       <section className='min-h-screen w-full p-8 bg-gray-100'>
         <div className='text-start mb-8'>
-          <h2 className='text-[#3896D6] text-[24px] sm:text-[30px] md:text-[41.6px] font-bold'>
-            Our Services
-          </h2>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={slideLeft}
+          >
+            <h2 className='text-[#3896D6] text-[24px] sm:text-[30px] md:text-[41.6px] font-bold'>
+              Our Services
+            </h2>
+          </motion.div>
+
         </div>
         <div className='flex flex-wrap justify-center gap-4'>
           {texts.map((text, index) => {
@@ -125,22 +141,28 @@ const Index = () => {
             const secondLine = remainingWords.join(' ');
 
             return (
-              <div key={index} className='relative w-full max-w-[400px] h-64'>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className='relative w-full max-w-[300px] md:max-w-[400px] h-48 md:h-64'
+              >
                 <Image
                   src={`/index/services${index + 1}.png`}
                   alt={`services ${index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
+                  layout='fill'
+                  objectFit='cover'
                   className='absolute inset-0'
                 />
                 <div className='absolute inset-0 flex justify-center items-center'>
-                  <div className='bg-white bg-opacity-70 rounded-3xl text-center hover:bg-[#1C285D] cursor-pointer px-8 py-2'>
-                    <h1 className='text-[#266189] hover:text-white text-[18px] md:text-[25px] font-bold'>
+                  <div className='bg-white bg-opacity-70 rounded-3xl text-center hover:bg-[#1C285D] cursor-pointer px-4 md:px-8 py-2'>
+                    <h1 className='text-[#266189] hover:text-white text-[14px] md:text-[25px] font-bold'>
                       {firstWord} <br /> {secondLine}
                     </h1>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -151,7 +173,12 @@ const Index = () => {
         <div className="p-4 sm:p-8">
           {/* Top Section */}
           <div className='flex flex-col md:flex-row gap-4'>
-            <div className="flex flex-col gap-4 max-w-full md:max-w-[70%] lg:max-w-[60%]">
+            <motion.div
+              className="flex flex-col gap-4 max-w-full md:max-w-[70%] lg:max-w-[60%]"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+            >
               <h2 className='text-[#266189] text-[20px] sm:text-[23px] lg:text-[26px] font-bold'>
                 Plumbing Problems? WPH Plumbing has got your back!
               </h2>
@@ -161,8 +188,13 @@ const Index = () => {
               <p className='text-black text-[14px] sm:text-[16px]'>
                 Surrounded by the picturesque Southern Gold Coast from Palm Beach to Tugun and beyond, our primary aim isn&apos;t just fixing leaks and pipes. It&apos;s about building lasting relationships with every client. Our dedication to service quality and community engagement ensures you always have a trusted partner for all your plumbing requirements.
               </p>
-            </div>
-            <div className='flex w-full justify-center items-center'>
+            </motion.div>
+            <motion.div
+              className='flex w-full justify-center items-center'
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+            >
               <Image
                 src="/index/sect3-1.png"
                 alt="Plumbing Service Image"
@@ -171,12 +203,17 @@ const Index = () => {
                 className='w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] h-auto'
                 style={{ objectFit: 'cover' }}
               />
-            </div>
+            </motion.div>
           </div>
-          
+
           {/* Bottom Section */}
           <div className='flex flex-col md:flex-row gap-4 mt-8'>
-            <div className='flex w-full justify-center items-center'>
+            <motion.div
+              className='flex w-full justify-center items-center'
+              initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
+            >
               <Image
                 src="/index/sect3-2.png"
                 alt="Plumbing Service Image"
@@ -185,8 +222,13 @@ const Index = () => {
                 className='w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] h-auto'
                 style={{ objectFit: 'cover' }}
               />
-            </div>
-            <div className="flex flex-col gap-4 max-w-full md:max-w-[70%] lg:max-w-[60%]">
+            </motion.div>
+            <motion.div
+              className="flex flex-col gap-4 max-w-full md:max-w-[70%] lg:max-w-[60%]"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideUp}
+            >
               <h2 className='text-[#266189] text-[20px] sm:text-[23px] lg:text-[26px] font-bold'>
                 Decades of Trust and Expertise
               </h2>
@@ -199,7 +241,7 @@ const Index = () => {
               <p className='text-black text-[14px] sm:text-[16px]'>
                 Whether you&apos;re looking to enjoy a warm uninterrupted shower during the chillier months or considering a new gas appliance, we&apos;ve got the know-how and commitment to guarantee a smooth, safe installation. When you choose WPH Plumbing, you&apos;re choosing a legacy of trust, expertise, and a dedication to excellence.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -207,18 +249,30 @@ const Index = () => {
       {/* Section 4 */}
       <section className='w-full h-full'>
         <div className='text-center'>
-          <h1 className='text-[#3896D6] py-8 text-[20px] sm:text-[30px] lg:text-[39px]'>
+          <motion.h1
+            className='text-[#3896D6] py-8 text-[20px] sm:text-[30px] lg:text-[39px]'
+            initial="hidden"
+            whileInView="visible"
+            variants={slideLeft}
+          >
             Contact Our Team On 0414 440 509
-          </h1>
-          <div className='w-full h-[50vh] relative'>
-            <Image
-              src="/index/sect4-1.png"
+          </motion.h1>
+
+          <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className='flex w-full'
+        >
+          <Image
+           src="/index/sect4-1.png"
               alt="Section Image"
-              layout="fill" // Makes the image cover the container
-              objectFit="cover" // Ensures the image covers the entire container
-              className='absolute inset-0'
-            />
-          </div>
+            width={500}
+            height={500}
+            className='w-full'
+            style={{ objectFit: 'contain' }}
+          />
+        </motion.div>
         </div>
       </section>
 
