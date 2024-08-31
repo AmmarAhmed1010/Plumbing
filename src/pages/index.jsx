@@ -15,14 +15,7 @@ const Index = () => {
   ];
 
   // Animation settings
-  const slideIn = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-  };
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8 } }
-  };
+
 
   const slideLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -191,7 +184,7 @@ const Index = () => {
             </motion.div>
             <motion.div
               className='flex w-full justify-center items-center'
-              initial="hidden"
+             initial="hidden"
               whileInView="visible"
               variants={slideLeft}
             >
