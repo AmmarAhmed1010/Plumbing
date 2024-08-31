@@ -96,13 +96,13 @@ const Index = () => {
             Burleigh Tugun & Surrounds
           </h3>
           <p className="text-[16px] sm:text-[18px] text-black">
-            Welcome to WPH Plumbing, your local Southern Gold Coast Plumbers servicing Palm Beach, Currumbin, Burleigh, Tugun, and the surrounding area. Born and bred on the Gold Coast, our local roots run deep, and our love for the community shines through in every job we undertake. Whether youre contending with a bothersome blockage, a mischievous leak, or just in need of some friendly advice on your plumbing, were here to assist.
+            Welcome to WPH Plumbing, your local Southern Gold Coast Plumbers servicing Palm Beach, Currumbin, Burleigh, Tugun, and the surrounding area. Born and bred on the Gold Coast, our local roots run deep, and our love for the community shines through in every job we undertake. Whether you&apos;re contending with a bothersome blockage, a mischievous leak, or just in need of some friendly advice on your plumbing, we&apos;re here to assist.
           </p>
           <h3 className="text-[18px] sm:text-[20px] font-serif font-bold md:text-[23px] text-[#266189]">
             Prompt Service Every Time
           </h3>
           <p className="text-[16px] sm:text-[18px] text-black">
-            Despite the relaxed ambience that the Southern Gold Coast offers, we at WPH Plumbing recognise the urgency of your needs. Our commitment: Timely service ensuring no prolonged disruptions to your daily life. Whether youre in Palm Beach, Currumbin, Burleigh, Tugun, or another corner of the Coast, were here to help. Well make sure the only thing draining is your pipes, not your patience.
+            Despite the relaxed ambience that the Southern Gold Coast offers, we at WPH Plumbing recognise the urgency of your needs. Our commitment: Timely service ensuring no prolonged disruptions to your daily life. Whether you&apos;re in Palm Beach, Currumbin, Burleigh, Tugun, or another corner of the Coast, we&apos;re here to help. We&apos;ll make sure the only thing draining is your pipes, not your patience.
           </p>
           <div className='flex justify-center md:justify-start'>
             <button className="bg-[#3896D6] rounded-3xl text-white px-6 py-3 mt-4">
@@ -156,10 +156,10 @@ const Index = () => {
                 Plumbing Problems? WPH Plumbing has got your back!
               </h2>
               <p className='text-black text-[14px] sm:text-[16px]'>
-                Surrounded by the picturesque Southern Gold Coast from Palm Beach to Tugun and beyond our primary aim isnt just fixing leaks and pipes. Its about building lasting relationships with every client. Our dedication to service quality and community engagement ensures you always have a trusted partner for all your plumbing requirements.
+                Surrounded by the picturesque Southern Gold Coast from Palm Beach to Tugun and beyond, our primary aim isn&apos;t just fixing leaks and pipes. It&apos;s about building lasting relationships with every client. Our dedication to service quality and community engagement ensures you always have a trusted partner for all your plumbing requirements.
               </p>
               <p className='text-black text-[14px] sm:text-[16px]'>
-                Surrounded by the picturesque Southern Gold Coast from Palm Beach to Tugun and beyond our primary aim isnt just fixing leaks and pipes. Its about building lasting relationships with every client. Our dedication to service quality and community engagement ensures you always have a trusted partner for all your plumbing requirements.
+                Surrounded by the picturesque Southern Gold Coast from Palm Beach to Tugun and beyond, our primary aim isn&apos;t just fixing leaks and pipes. It&apos;s about building lasting relationships with every client. Our dedication to service quality and community engagement ensures you always have a trusted partner for all your plumbing requirements.
               </p>
             </div>
             <div className='flex w-full justify-center items-center'>
@@ -191,13 +191,13 @@ const Index = () => {
                 Decades of Trust and Expertise
               </h2>
               <p className='text-black text-[14px] sm:text-[16px]'>
-                At WPH Plumbing were not just a business were a family. Located in the heart of the Gold Coast weve become the go-to plumber Palm Beach and Currumbin residents have trusted for years.
+                At WPH Plumbing we&apos;re not just a business, we&apos;re a family. Located in the heart of the Gold Coast, we&apos;ve become the go-to plumber Palm Beach and Currumbin residents have trusted for years.
               </p>
               <p className='text-black text-[14px] sm:text-[16px]'>
-                Our family-driven ethos allows us to truly understand and empathise with your concerns ensuring we deliver solutions tailored to your needs. With over 15 years of hands-on experience our team has mastered the art of plumbing always prioritising the efficiency and longevity of your system. But our expertise doesnt stop at pipes and drains were also seasoned in hot water solutions and gas fitting.
+                Our family-driven ethos allows us to truly understand and empathise with your concerns, ensuring we deliver solutions tailored to your needs. With over 15 years of hands-on experience, our team has mastered the art of plumbing, always prioritising the efficiency and longevity of your system. But our expertise doesn&apos;t stop at pipes and drains; we&apos;re also seasoned in hot water solutions and gas fitting.
               </p>
               <p className='text-black text-[14px] sm:text-[16px]'>
-                Whether youre looking to enjoy a warm uninterrupted shower during the chillier months or considering a new gas appliance weve got the know-how and commitment to guarantee a smooth safe installation. When you choose WPH Plumbing youre choosing a legacy of trust expertise and a dedication to excellence.
+                Whether you&apos;re looking to enjoy a warm uninterrupted shower during the chillier months or considering a new gas appliance, we&apos;ve got the know-how and commitment to guarantee a smooth, safe installation. When you choose WPH Plumbing, you&apos;re choosing a legacy of trust, expertise, and a dedication to excellence.
               </p>
             </div>
           </div>
@@ -206,24 +206,23 @@ const Index = () => {
 
       {/* Section 4 */}
       <section className='w-full h-full'>
-      <div className='text-center'>
-        <h1 className='text-[#3896D6] py-8 text-[20px] sm:text-[30px] lg:text-[39px]'>
-          Contact Our Team On 0414 440 509
-        </h1>
-        <div className='w-full h-[50vh] relative'>
-          <Image
-            src="/index/sect4-1.png"
-            alt="Section Image"
-            layout="fill" // Makes the image cover the container
-            objectFit="maintain" // Ensures the image covers the entire container
-            className='absolute inset-0'
-          />
+        <div className='text-center'>
+          <h1 className='text-[#3896D6] py-8 text-[20px] sm:text-[30px] lg:text-[39px]'>
+            Contact Our Team On 0414 440 509
+          </h1>
+          <div className='w-full h-[50vh] relative'>
+            <Image
+              src="/index/sect4-1.png"
+              alt="Section Image"
+              layout="fill" // Makes the image cover the container
+              objectFit="cover" // Ensures the image covers the entire container
+              className='absolute inset-0'
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* section5 */}
- 
+      {/* Section 5 */}
     </>
   );
 };

@@ -38,9 +38,9 @@ const contact_us = () => {
               className='px-6 text-start lg:text-left'
             >
               <h1 className='text-[#3896D6] font-extrabold text-[32px] mb-6 md:text-[36px] lg:text-[41px]'>GET IN TOUCH</h1>
-              <p className='text-[14px] md:text-[16px] mb-4 md:mb-6'>Hello fellow tap users Its Will from WPH Plumbing here</p>
+              <p className='text-[14px] md:text-[16px] mb-4 md:mb-6'>Hello fellow tap users It&apos;s Will from WPH Plumbing here</p>
               <p className='text-[14px] md:text-[16px]'>
-                If you are looking for an honest and trustworthy plumber in Palm Beach then look no further than WPH Plumbing In fact WPH Plumbing is more than just your average plumber in Palm Beach we are a global phenomenon servicing places like Milan Venice Paris Barcelona but mainly the Gold Coast of Queensland So if you need any help with your plumbing and you live in any of these locations but mainly the Gold Coast dont hesitate to call us we are more than happy to help
+                If you are looking for an honest and trustworthy plumber in Palm Beach then look no further than WPH Plumbing. In fact, WPH Plumbing is more than just your average plumber in Palm Beach; we are a global phenomenon servicing places like Milan, Venice, Paris, Barcelona, but mainly the Gold Coast of Queensland. So if you need any help with your plumbing and you live in any of these locations, but mainly the Gold Coast, don&apos;t hesitate to call us. We&apos;re more than happy to help.
               </p>
             </motion.div>
           </div>

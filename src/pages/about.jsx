@@ -55,7 +55,7 @@ const About = () => {
               A BACK STORY
             </motion.h1>
             <motion.p className='text-[14px] md:text-[16px]' variants={fadeIn}>
-              WPH Plumbing was born 7 years ago with a vision to provide quality plumbing services to the people of the Gold Coast and Northern NSW. Will loves his family and the outdoor life, if he isn't waist-deep in a hole you can find him camping or more than likely catching some waves. His love and commitment to his family and friends extend to his clients with each of his clients becoming a part of the WPH family.
+              WPH Plumbing was born 7 years ago with a vision to provide quality plumbing services to the people of the Gold Coast and Northern NSW. Will loves his family and the outdoor life, if he isn&apos;t waist-deep in a hole you can find him camping or more than likely catching some waves. His love and commitment to his family and friends extend to his clients with each of his clients becoming a part of the WPH family.
             </motion.p>
             <motion.p className='text-[14px] md:text-[16px]' variants={fadeIn}>
               The daily challenges and diversity of plumbing is what inspires Will each and every day. Will is extremely excited to grow his business with the employment of his first apprentice Connor joining WPH. Will enjoys teaching the dark art of plumbing to Connor but more importantly also having someone there to dig the holes.
@@ -81,19 +81,19 @@ const About = () => {
             WPH Plumbing is your trusted and reliable plumbing partner in the Gold Coast area. Our team of experienced and knowledgeable professionals is dedicated to providing quality service to all our clients. As a local business born and raised in the community, we take pride in serving our neighbors and providing them with top-notch plumbing solutions.
           </motion.p>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
-            We understand that plumbing emergencies can happen at any time, and that's why we offer 24/7 services to ensure that our clients are always covered, no matter the time of day. Our team is always available to take your call and dispatch our skilled technicians to your location as quickly as possible to resolve your plumbing issues in a timely and efficient manner.
+            We understand that plumbing emergencies can happen at any time, and that&apos;s why we offer 24/7 services to ensure that our clients are always covered, no matter the time of day. Our team is always available to take your call and dispatch our skilled technicians to your location as quickly as possible to resolve your plumbing issues in a timely and efficient manner.
           </motion.p>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
-            As Currumbin's preferred plumber, our team has extensive experience dealing with the unique plumbing challenges that homeowners and businesses in the area face. From fixing a leaky faucet to undertaking major plumbing projects, we have the expertise to handle any plumbing job that comes our way, regardless of its complexity.
+            As Currumbin&apos;s preferred plumber, our team has extensive experience dealing with the unique plumbing challenges that homeowners and businesses in the area face. From fixing a leaky faucet to undertaking major plumbing projects, we have the expertise to handle any plumbing job that comes our way, regardless of its complexity.
           </motion.p>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
-            At WPH Plumbing, we're all about building relationships with our clients. We know that trust, honesty, and transparency are crucial in building a lasting relationship, and we're committed to embodying these values in all our interactions. Our personalized approach to every job means we take time to understand your unique needs, find the perfect solution for you, and communicate effectively throughout the process.
+            At WPH Plumbing, we&apos;re all about building relationships with our clients. We know that trust, honesty, and transparency are crucial in building a lasting relationship, and we&apos;re committed to embodying these values in all our interactions. Our personalized approach to every job means we take time to understand your unique needs, find the perfect solution for you, and communicate effectively throughout the process.
           </motion.p>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
-            We're dedicated to staying up to date with the latest advancements in the industry, and that's why our technicians are equipped with the most advanced tools and technology in the market to deliver cutting-edge services to our clients. We're always striving to exceed our clients' expectations, and we never compromise on the quality of service we deliver.
+            We&apos;re dedicated to staying up to date with the latest advancements in the industry, and that&apos;s why our technicians are equipped with the most advanced tools and technology in the market to deliver cutting-edge services to our clients. We&apos;re always striving to exceed our clients&apos; expectations, and we never compromise on the quality of service we deliver.
           </motion.p>
           <motion.p className='text-[16px] text-white' variants={fadeIn}>
-            Thank you for considering WPH Plumbing for your plumbing needs. Whether you're facing a minor plumbing issue or a major emergency, we're always ready to provide you with high-quality service that will keep you satisfied. Don't hesitate to contact us to schedule an appointment or speak with one of our friendly team members.
+            Thank you for considering WPH Plumbing for your plumbing needs. Whether you&apos;re facing a minor plumbing issue or a major emergency, we&apos;re always ready to provide you with high-quality service that will keep you satisfied. Don&apos;t hesitate to contact us to schedule an appointment or speak with one of our friendly team members.
           </motion.p>
         </motion.div>
       </motion.section>
@@ -144,7 +144,7 @@ const About = () => {
           >
             <h1 className='text-[#3896D6] font-extrabold text-[20px] md:text-[24px]'>Connor</h1>
             <p className='text-[14px] md:text-[16px]'>
-              Connor is the first apprentice hired at WPH Plumbing. He enjoys learning the dark art of plumbing and doing all the heavy lifting. Connor is the man on the tools, working closely with Will to learn the trade. He's a strong believer in the WPH ethos and is always ready to tackle any plumbing task thrown his way.
+              Connor is the first apprentice hired at WPH Plumbing. He enjoys learning the dark art of plumbing and doing all the heavy lifting. Connor is the man on the tools, working closely with Will to learn the trade. He&apos;s a strong believer in the WPH ethos and is always ready to tackle any plumbing task thrown his way.
             </p>
           </motion.div>
 
