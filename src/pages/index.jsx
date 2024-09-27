@@ -66,7 +66,7 @@ const Index = () => {
 
       {/* Section 1 */}
       <section
-        className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 p-4 sm:p-8 min-h-screen'
+        className='bg-white flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-4 min-h-screen'
         ref={sectionRef}
       >
         <motion.div
@@ -85,7 +85,7 @@ const Index = () => {
           />
         </motion.div>
         <motion.div
-          className="flex flex-col gap-4 text-left max-w-[90%] sm:max-w-[70%] md:max-w-[50%]"
+          className="flex flex-col gap-4 text-left w-full  md:max-w-[50%]"
           initial="hidden"
           whileInView="visible"
           variants={slideLeft}
@@ -115,7 +115,7 @@ const Index = () => {
       </section>
 
       {/* Section 2 */}
-      <section className='min-h-screen w-full p-8 bg-gray-100'>
+      <section className='min-h-screen w-full px-4 py-4 bg-gray-100'>
         <div className='text-start mb-8'>
           <motion.div
             initial="hidden"
@@ -128,7 +128,7 @@ const Index = () => {
           </motion.div>
 
         </div>
-        <div className='flex flex-wrap justify-center gap-4'>
+        <div className='flex flex-wrap justify-center  gap-4'>
           {texts.map((text, index) => {
             const [firstWord, ...remainingWords] = text.split(' ');
             const secondLine = remainingWords.join(' ');
@@ -163,7 +163,7 @@ const Index = () => {
 
       {/* Section 3 */}
       <section className='min-h-screen w-full'>
-        <div className="p-4 sm:p-8">
+        <div className="px-4 py-4">
           {/* Top Section */}
           <div className='flex flex-col md:flex-row gap-4'>
             <motion.div
@@ -193,7 +193,7 @@ const Index = () => {
                 alt="Plumbing Service Image"
                 width={500}
                 height={500}
-                className='w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] h-auto'
+                className='w-full md:max-w-[400px] lg:max-w-[500px] h-auto'
                 style={{ objectFit: 'cover' }}
               />
             </motion.div>
@@ -212,7 +212,7 @@ const Index = () => {
                 alt="Plumbing Service Image"
                 width={500}
                 height={500}
-                className='w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] h-auto'
+                className='w-full md:max-w-[400px] lg:max-w-[500px] h-auto'
                 style={{ objectFit: 'cover' }}
               />
             </motion.div>

@@ -55,7 +55,7 @@ const Services = () => {
             variants={slideUp}
             className='flex flex-col text-white mb-4'
           >
-            <h1 className='text-5xl font-serif font-extrabold'>OUR SERVICES</h1>
+            <h1 className='text-5xl font-serif text-center font-extrabold'>OUR SERVICES</h1>
           </motion.div>
         </div>
       </section>

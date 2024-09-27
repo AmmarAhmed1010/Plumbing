@@ -50,7 +50,7 @@ const About = () => {
 
       {/* Section 1 */}
       <motion.section
-        className='px-4 py-6 md:px-8 md:py-12 lg:px-16'
+        className='py-6 px-4 md:px-8 md:py-12 lg:px-16'
         initial="hidden"
         whileInView="visible"
         variants={slideLeft}
@@ -80,7 +80,7 @@ const About = () => {
 
       {/* Section 2 */}
       <motion.section
-        className='px-6 py-6 bg-[#3896D6] w-full'
+        className='px-4 md:px-8 md:py-12 lg:px-16 py-6 bg-[#3896D6] w-full'
         initial="hidden"
         whileInView="visible"
         variants={slideLeft}
@@ -108,7 +108,7 @@ const About = () => {
       </motion.section>
 
       {/* Section 3 */}
-      <section className='w-full px-4 py-6 md:px-8 md:py-12 lg:px-16'>
+      <section className='w-full py-6 px-4 md:px-8 lg:px-16 md:py-12'>
       <motion.div
             className="heading w-full text-center py-4"
             initial="hidden"
